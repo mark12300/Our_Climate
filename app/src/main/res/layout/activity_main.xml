@@ -15,4 +15,16 @@
         android:textColor="@color/white"
         android:layout_centerInParent="true" />
 
+    <Button
+        android:id="@+id/guidanceBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/newsBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="214dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/need_help_click_me"
+        android:textColor="@color/white" />
+
 </RelativeLayout>
