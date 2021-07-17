@@ -11,7 +11,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.OurClimate">
-        <activity android:name=".NewsReadingActivity"></activity>
+        <activity android:name=".GuidanceReading"></activity>
+        <activity android:name=".GuidanceListActivity" />
+        <activity android:name=".NewsReadingActivity" />
         <activity android:name=".NewsFeedActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
