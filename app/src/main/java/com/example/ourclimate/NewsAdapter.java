@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,14 +15,14 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     private Context context;
     private List<NewsModel> newsModelList;
     private final OnItemClickListener listener;
 
 
-    public Adapter(Context context, List<NewsModel> newsModelList, OnItemClickListener listener) {
+    public NewsAdapter(Context context, List<NewsModel> newsModelList, OnItemClickListener listener) {
         this.context = context;
         this.newsModelList = newsModelList;
         this.listener = listener;

@@ -11,12 +11,13 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.OurClimate">
-        <activity android:name=".NewsReadingActivity"></activity>
+        <activity android:name=".GuidelineReadingActivity"></activity>
+        <activity android:name=".GuidelinesListActivity" />
+        <activity android:name=".NewsReadingActivity" />
         <activity android:name=".NewsFeedActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

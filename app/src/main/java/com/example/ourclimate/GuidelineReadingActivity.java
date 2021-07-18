@@ -9,32 +9,29 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-public class NewsReadingActivity extends AppCompatActivity {
-
-    private TextView titleTxt, contentTxt, dateTxt;
+public class GuidelineReadingActivity extends AppCompatActivity {
+    private TextView titleTxt, contentTxt;
     private ImageView imgView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_news_reading);
+        setContentView(R.layout.activity_guideline_reading);
 
         initViews();
         setViews();
+    }
+
+    private void initViews() {
+        titleTxt = findViewById(R.id.guidelineTitleTxt);
+        contentTxt = findViewById(R.id.guidelineContentTxt);
+        imgView = findViewById(R.id.guidelineImg);
     }
 
     private void setViews() {
         Intent tempIntent = getIntent();
         titleTxt.setText(tempIntent.getStringExtra("Title"));
         contentTxt.setText(tempIntent.getStringExtra("Content"));
-        dateTxt.setText("Published Date: " + tempIntent.getStringExtra("Date"));
         Glide.with(this).asBitmap().load(tempIntent.getStringExtra("ImageURL")).into(imgView);
-    }
-
-    private void initViews() {
-        titleTxt = findViewById(R.id.newsTitleTxt);
-        contentTxt = findViewById(R.id.newsContentTxt);
-        dateTxt = findViewById(R.id.newsDateTxt);
-        imgView = findViewById(R.id.newsImg);
     }
 }

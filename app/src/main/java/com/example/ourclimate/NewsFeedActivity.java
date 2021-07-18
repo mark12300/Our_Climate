@@ -3,7 +3,6 @@ package com.example.ourclimate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -21,9 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class NewsFeedActivity extends AppCompatActivity {
 
@@ -31,7 +28,7 @@ public class NewsFeedActivity extends AppCompatActivity {
     private List<NewsModel> newsModelList = new ArrayList<>();
     private RecyclerView recyclerView;
     private boolean isLoading = false;
-    private Adapter adapter;
+    private NewsAdapter newsAdapter;
     private int currentPage = 1;
     private final String URL_PART_1 = "https://content.guardianapis.com/search?order-by=newest&section=environment&show-fields=bodyText,thumbnail&q=climate&page=";
     private final String URL_PART_2 = "&page-size=200&api-key=21f720af-057a-4a98-b5db-29886f455a42";
@@ -48,9 +45,9 @@ public class NewsFeedActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.newsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.guidelinesProgressBar);
     }
 
     private void initListeners() {
@@ -87,8 +84,8 @@ public class NewsFeedActivity extends AppCompatActivity {
 
                     }
 
-                    if (adapter == null) {
-                        adapter = new Adapter(NewsFeedActivity.this, newsModelList, new Adapter.OnItemClickListener() {
+                    if (newsAdapter == null) {
+                        newsAdapter = new NewsAdapter(NewsFeedActivity.this, newsModelList, new NewsAdapter.OnItemClickListener() {
                             @Override
                             public void onItemClick(NewsModel item) {
                                 Intent intent = new Intent(NewsFeedActivity.this, NewsReadingActivity.class);
@@ -99,9 +96,9 @@ public class NewsFeedActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         });
-                        recyclerView.setAdapter(adapter);
+                        recyclerView.setAdapter(newsAdapter);
                     } else {
-                        adapter.updateNewsModelList(newsModelList);
+                        newsAdapter.updateNewsModelList(newsModelList);
                     }
 
                     progressBar.setVisibility(View.GONE);
