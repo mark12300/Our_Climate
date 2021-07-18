@@ -32,9 +32,9 @@ public class NewsReadingActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        titleTxt = findViewById(R.id.titleTxt);
-        contentTxt = findViewById(R.id.contentTxt);
-        dateTxt = findViewById(R.id.dateTxt);
-        imgView = findViewById(R.id.imgView);
+        titleTxt = findViewById(R.id.newsTitleTxt);
+        contentTxt = findViewById(R.id.newsContentTxt);
+        dateTxt = findViewById(R.id.newsDateTxt);
+        imgView = findViewById(R.id.newsImg);
     }
 }

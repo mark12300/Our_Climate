@@ -23,20 +23,20 @@
         android:layout_height="match_parent">
 
         <ProgressBar
+            android:id="@+id/guidelinesProgressBar"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:indeterminateTint="@color/grey"
-            android:id="@+id/progressBar"
-            android:visibility="visible"/>
+            android:visibility="visible" />
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp"
-                android:visibility="invisible" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/newsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:visibility="invisible" />
 
     </FrameLayout>
 

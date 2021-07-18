@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".GuidanceListActivity">
+    tools:context=".GuidelinesListActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:fontFamily="@font/g_bold"
         android:gravity="center_horizontal"
         android:padding="10dp"
-        android:text="What to do in Case of a Hazard"
+        android:text="Safety Guidelines"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp" />
@@ -23,16 +23,16 @@
         android:layout_height="match_parent">
 
         <ProgressBar
+            android:id="@+id/guidelinesProgressBar"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:indeterminateTint="@color/grey"
-            android:id="@+id/progressBar"
-            android:visibility="visible"/>
+            android:visibility="visible" />
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/guidanceRecyclerView"
+            android:id="@+id/guidelinesRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="15dp"

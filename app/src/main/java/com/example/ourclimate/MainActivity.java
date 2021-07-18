@@ -6,16 +6,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.List;
-
-// trying to create a new branch
-
 public class MainActivity extends AppCompatActivity {
 
-    private Button newsBtn,guidanceBtn;
-    private List<NewsModel> articles;
-    private List<GuidanceModel> guidance;
-    private int currentPage = 1;
+    private Button newsBtn, safetyGuidelinesBtn;
     private String URL1 = "https://content.guardianapis.com/search?show-fields=bodyText&show-tags=contributer&q=climate&page=";
     private String URL2 = "&page-size=200&api-key=21f720af-057a-4a98-b5db-29886f455a42";
 
@@ -28,21 +21,21 @@ public class MainActivity extends AppCompatActivity {
         initListeners();
     }
 
-    // initialize the views here
+    // Initialize the views here
     private void initViews() {
         newsBtn = findViewById(R.id.newsBtn);
-        guidanceBtn = findViewById(R.id.guidanceBtn);
+        safetyGuidelinesBtn = findViewById(R.id.safetyGuidelinesBtn);
     }
 
 
-    // add the listeners here
+    // Add listeners here
     private void initListeners() {
         newsBtn.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, NewsFeedActivity.class));
         });
 
-        guidanceBtn.setOnClickListener(v ->{
-            startActivity(new Intent(MainActivity.this, GuidanceListActivity.class));
+        safetyGuidelinesBtn.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, GuidelinesListActivity.class));
         });
     }
 }

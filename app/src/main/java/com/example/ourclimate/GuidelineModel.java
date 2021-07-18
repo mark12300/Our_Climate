@@ -1,12 +1,12 @@
 package com.example.ourclimate;
 
-public class GuidanceModel {
+public class GuidelineModel {
     private String content, title, imageURL;
 
-    public GuidanceModel(String content, String title, String image) {
-        this.content = content;
+    public GuidelineModel(String title, String content, String imageURL) {
         this.title = title;
-        this.imageURL = image;
+        this.content = content;
+        this.imageURL = imageURL;
     }
     public String getContent() {
         return content;

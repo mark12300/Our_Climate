@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,13 +9,13 @@
         android:id="@+id/newsBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:backgroundTint="@color/red"
         android:text="News"
-        android:textColor="@color/white"
-        android:layout_centerInParent="true" />
+        android:textColor="@color/white" />
 
     <Button
-        android:id="@+id/guidanceBtn"
+        android:id="@+id/safetyGuidelinesBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/newsBtn"
@@ -24,7 +23,7 @@
         android:layout_centerInParent="true"
         android:layout_marginBottom="214dp"
         android:backgroundTint="@color/red"
-        android:text="@string/need_help_click_me"
+        android:text="Safety Guidelines"
         android:textColor="@color/white" />
 
 </RelativeLayout>
